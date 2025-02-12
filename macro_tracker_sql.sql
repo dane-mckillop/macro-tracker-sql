@@ -1,5 +1,6 @@
 USE [YourDatabaseName]; -- Replace with your actual database name
 
+--User utilizing the application.
 CREATE TABLE [User] (
     UserId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
     Username VARCHAR(50) NOT NULL,
@@ -9,6 +10,7 @@ CREATE TABLE [User] (
     Weight FLOAT
 );
 
+--Eating plan for the user
 CREATE TABLE [Plan] (
     PlanId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
     UserId INT,                          -- Foreign key to User table
@@ -21,6 +23,7 @@ CREATE TABLE [Plan] (
     CONSTRAINT FK_Plan_User FOREIGN KEY (UserId) REFERENCES [User](UserId) -- Foreign key constraint
 );
 
+--Food item under consideration by the user for their food plan.
 CREATE TABLE FoodPer100g (
     FoodId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
     Name VARCHAR(100) NOT NULL,
@@ -31,11 +34,13 @@ CREATE TABLE FoodPer100g (
     Price FLOAT
 );
 
+--Vendor supplying food items.
 CREATE TABLE Vendor (
     VendorId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
     Location VARCHAR(255)
 );
 
+--Intermediate table, Food items and Plan.
 CREATE TABLE FoodPlan (
     FoodId INT,                           -- Foreign key to FoodPer100g table
     PlanId INT,                           -- Foreign key to Plan table
@@ -44,6 +49,7 @@ CREATE TABLE FoodPlan (
     CONSTRAINT FK_FoodPlan_Plan FOREIGN KEY (PlanId) REFERENCES [Plan](PlanId)
 );
 
+--Intermediate table, Food items and Vendors.
 CREATE TABLE FoodVendor (
     VendorId INT,                         -- Foreign key to Vendor table
     FoodId INT,                           -- Foreign key to FoodPer100g table
