@@ -26,7 +26,7 @@ CREATE TABLE [Plan] (
 --Food item under consideration by the user for their food plan.
 CREATE TABLE FoodPer100g (
     FoodId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
-    Name VARCHAR(100) NOT NULL,
+    Name VARCHAR(100) NOT NULL UNIQUE,
     Protein FLOAT, 
     Calories FLOAT,
     Carbs FLOAT,
