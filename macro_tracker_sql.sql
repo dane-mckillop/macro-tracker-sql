@@ -37,6 +37,8 @@ CREATE TABLE FoodPer100g (
 --Vendor supplying food items.
 CREATE TABLE Vendor (
     VendorId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
+    FoodId INT,                             -- Foreign key to FoodPer100g table
+    Price FLOAT,
     Location VARCHAR(255)
 );
 
@@ -47,13 +49,4 @@ CREATE TABLE FoodPlan (
     PRIMARY KEY (FoodId, PlanId),         -- Composite primary key
     CONSTRAINT FK_FoodPlan_Food FOREIGN KEY (FoodId) REFERENCES FoodPer100g(FoodId),
     CONSTRAINT FK_FoodPlan_Plan FOREIGN KEY (PlanId) REFERENCES [Plan](PlanId)
-);
-
---Intermediate table, Food items and Vendors.
-CREATE TABLE FoodVendor (
-    VendorId INT,                         -- Foreign key to Vendor table
-    FoodId INT,                           -- Foreign key to FoodPer100g table
-    PRIMARY KEY (VendorId, FoodId),       -- Composite primary key
-    CONSTRAINT FK_FoodVendor_Vendor FOREIGN KEY (VendorId) REFERENCES Vendor(VendorId),
-    CONSTRAINT FK_FoodVendor_Food FOREIGN KEY (FoodId) REFERENCES FoodPer100g(FoodId)
 );
