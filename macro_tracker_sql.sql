@@ -1,8 +1,8 @@
-USE [YourDatabaseName]; -- Replace with your actual database name
+USE [macro-tracker-sql]; 
+GO
 
---User utilizing the application.
 CREATE TABLE [User] (
-    UserId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
+    UserId INT PRIMARY KEY IDENTITY(1,1), -- PK auto-increment
     Username VARCHAR(50) NOT NULL,
     HashPassword VARCHAR(255) NOT NULL,
     Age INT,
@@ -10,9 +10,8 @@ CREATE TABLE [User] (
     Weight FLOAT
 );
 
---Eating plan for the user
 CREATE TABLE [Plan] (
-    PlanId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
+    PlanId INT PRIMARY KEY IDENTITY(1,1), -- PK auto-increment
     UserId INT,                          -- Foreign key to User table
     Name VARCHAR(100) NOT NULL,
     ProteinMacro FLOAT,
@@ -20,12 +19,11 @@ CREATE TABLE [Plan] (
     CarbsMacro FLOAT,
     FatMacro FLOAT,
     WaterMacro FLOAT,
-    CONSTRAINT FK_Plan_User FOREIGN KEY (UserId) REFERENCES [User](UserId) -- Foreign key constraint
+    CONSTRAINT FK_Plan_User FOREIGN KEY (UserId) REFERENCES [User](UserId) -- FK constraint
 );
 
---Food item under consideration by the user for their food plan.
 CREATE TABLE FoodPer100g (
-    FoodId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
+    FoodId INT PRIMARY KEY IDENTITY(1,1), -- PK auto-increment
     Name VARCHAR(100) NOT NULL UNIQUE,
     Protein FLOAT, 
     Calories FLOAT,
@@ -34,19 +32,27 @@ CREATE TABLE FoodPer100g (
     Price FLOAT
 );
 
---Vendor supplying food items.
 CREATE TABLE Vendor (
-    VendorId INT PRIMARY KEY IDENTITY(1,1), -- Primary key with auto-increment
-    FoodId INT,                             -- Foreign key to FoodPer100g table
-    Price FLOAT,
-    Location VARCHAR(255)
+    VendorId   INT PRIMARY KEY IDENTITY(1,1),
+    VendorName VARCHAR(100) NOT NULL,
+    Location   VARCHAR(255)
 );
 
---Intermediate table, Food items and Plan.
+CREATE TABLE VendorFoodPrice (
+    VendorId INT NOT NULL,
+    FoodId   INT NOT NULL,
+    Price    FLOAT NOT NULL CHECK (Price > 0),
+    DateUpdated DATE DEFAULT GETDATE(),
+
+    PRIMARY KEY (VendorId, FoodId),                    -- Composite PK
+    FOREIGN KEY (VendorId) REFERENCES Vendor(VendorId),
+    FOREIGN KEY (FoodId)   REFERENCES FoodPer100g(FoodId)
+);
+
 CREATE TABLE FoodPlan (
-    FoodId INT,                           -- Foreign key to FoodPer100g table
-    PlanId INT,                           -- Foreign key to Plan table
-    PRIMARY KEY (FoodId, PlanId),         -- Composite primary key
+    FoodId INT,                           -- FK FoodPer100g
+    PlanId INT,                           -- FK to Plan 
+    PRIMARY KEY (FoodId, PlanId),         -- Composite PK
     CONSTRAINT FK_FoodPlan_Food FOREIGN KEY (FoodId) REFERENCES FoodPer100g(FoodId),
     CONSTRAINT FK_FoodPlan_Plan FOREIGN KEY (PlanId) REFERENCES [Plan](PlanId)
 );
