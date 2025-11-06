@@ -4,11 +4,23 @@ VALUES
 ('Woolworths', 'Nationwide'),
 ('Coles', 'Nationwide'),
 ('Aldi', 'Nationwide'),
-('Chemist Warehouse', 'Nationwide');
+('Chemist Warehouse', 'Nationwide'),
+('McDonalds', 'Nationwide'),
+('Hungry Jacks', 'Nationwide'),
+('Grilld', 'Nationwide'),
+('KFC', 'Nationwide'),
+('Red Rooster', 'Nationwide'),
+('Schnitz', 'Nationwide'),
+('Pizza Hut', 'Nationwide'),
+('Dominos', 'Nationwide'),
+('Subway', 'Nationwide'),
+('Guzman Y Gomez', 'Nationwide'),
+
 
 DELETE FROM VendorFoodPrice;
 INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 -- WOOLWORTHS
+-- Meat
 ('Woolworths','Chicken Breast',18.50,1350,'g'),
 ('Woolworths','Chicken Tenders', 10.00,1000,'g'),
 ('Woolworths','Beef Steak - Chuck',14.80,800,'g'),
@@ -30,6 +42,7 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Duck Breast',14.50,380,'g'),
 ('Woolworths','Venison',NULL,NULL,NULL),
 ('Woolworths','Bison',NULL,NULL,NULL),
+-- Seafood
 ('Woolworths','Salmon',9.00,250,'g'),
 ('Woolworths','Smoked Salmon',13.50,180,'g'),
 ('Woolworths','Tuna - Fresh',NULL,NULL,NULL),
@@ -41,6 +54,7 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Smoked Trout',NULL,NULL,NULL),
 ('Woolworths','Sardines',3.50,110,'g'),
 ('Woolworths','Prawns',20.00,500,'g'),
+-- Dairy & Eggs
 ('Woolworths','Whole Milk',3.20,2000,'ml'),
 ('Woolworths','Skim Milk',1.65,1000,'ml'),
 ('Woolworths','Greek Yogurt',3.80,1000,'g'),
@@ -52,13 +66,10 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Brie Cheese',14.90,175,'g'),
 ('Woolworths','Halloumi Cheese',4.80,180,'g'),
 ('Woolworths','Free-Range Eggs',5.50,600,'g'),
+-- Grains, Rice & Pasta
 ('Woolworths','Jasmine Rice',3.50,1000,'g'),
 ('Woolworths','Basmati Rice',4.00,1000,'g'),
 ('Woolworths','Brown Rice',3.50,1000,'g'),
-('Woolworths','White Bread',3.50,800,'g'),
-('Woolworths','Wholemeal Bread',3.50,800,'g'),
-('Woolworths','Multigrain Bread',3.50,800,'g'),
-('Woolworths','Rye Bread',5.00,680,'g'),
 ('Woolworths','Pasta - Durum',2.95,500,'g'),
 ('Woolworths','Oats',1.70,750,'g'),
 ('Woolworths','Quinoa',6.00,500,'g'),
@@ -71,27 +82,52 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Chickpeas',1.00,420,'g'),
 ('Woolworths','Lentils',4.80,1000,'g'),
 ('Woolworths','Tofu',3.00,450,'g'),
+-- Bread
+('Woolworths','White Bread',3.50,800,'g'),
+('Woolworths','Wholemeal Bread',3.50,800,'g'),
+('Woolworths','Multigrain Bread',3.50,800,'g'),
+('Woolworths','Rye Bread',5.00,680,'g'),
+-- Nuts
 ('Woolworths','Almonds',8.75,400,'g'),
 ('Woolworths','Cashews',10.00,400,'g'),
 ('Woolworths','Walnuts',9.80,450,'g'),
 ('Woolworths','Brazil Nuts',17.50,400,'g'),
 ('Woolworths','Peanuts',6.00,750,'g'),
 ('Woolworths','Peanut Butter',3.40,500,'g'),
+-- Vegetables
 ('Woolworths','Broccoli',2.28,250,'g'),
 ('Woolworths','Spinach',5.00,280,'g'),
 ('Woolworths','Potato',6.00,2000,'g'),
 ('Woolworths','Sweet Potato',4.90,1000,'g'),
 ('Woolworths','Carrot',1.70,1000,'g'),
+-- Fruits
 ('Woolworths','Red Apple',5.90,1000,'g'),
 ('Woolworths','Green Apple',6.90,1000,'g'),
 ('Woolworths','Banana',0.83,120,'g'),
 ('Woolworths','Orange',1.29,175,'g'),
 ('Woolworths','Avocado',2.00,180,'g'),
 ('Woolworths','Capsicum',1.73,250,'g'),
+-- Snacks
 ('Woolworths','Pork Crackle',2.10,40,'g'),
 ('Woolworths','Beef Jerky',10.00,180,'g'),
+-- Drinks
+('Woolworths','Soft Drink - Regular',1.15,1250,'ml'),
+('Woolworths','Soft Drink - Diet',1.15,1250,'ml'),
+('Woolworths','Coca-Cola',3.50,2000,'ml'),
+('Woolworths','Coke-Zero',3.50,2000,'ml'),
+('Woolworths','Pepsi',3.80,2000,'ml'),
+('Woolworths','Pepsi Max',3.80,2000,'ml'),
+('Woolworths','Orange Juice - Regular',5.50,2000,'ml'),
+('Woolworths','Orange Juice - Premium',9.50,1000,'ml'),
+('Woolworths','Apple Juice',2.70,2000,'ml'),
+('Woolworths','Coffee - Black',32.00,500,'g'),
+('Woolworths','Coffee - With Milk',32.00,500,'g'),
+('Woolworths','Tea - Black',13.50,100,'pack'),
+('Woolworths','Tea - Green',13.50,100,'pack'),
+('Woolworths','Tea - With Milk',13.50,100,'pack'),
 
 -- COLES
+-- Meat
 ('Coles','Chicken Breast',17.00,1250,'g'),
 ('Coles','Chicken Tenders', 9.00,1000,'g'),
 ('Coles','Beef Steak - Chuck',16.00,850,'g'),
@@ -113,6 +149,7 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Duck Breast',14.50,380,'g'),
 ('Coles','Venison',NULL,NULL,NULL),
 ('Coles','Bison',NULL,NULL,NULL),
+-- Seafood
 ('Coles','Salmon',35.00,1000,'g'),
 ('Coles','Smoked Salmon',19.00,250,'g'),
 ('Coles','Tuna - Fresh',11.00, 200,'g'),
@@ -124,6 +161,7 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Smoked Trout',9.50,150,'g'),
 ('Coles','Sardines',2.90,106,'g'),
 ('Coles','Prawns',24.00,750,'g'),
+-- Dairy & Eggs
 ('Coles','Whole Milk',3.20,2000,'ml'),
 ('Coles','Skim Milk',1.65,1000,'ml'),
 ('Coles','Greek Yogurt',3.80,1000,'g'),
@@ -135,13 +173,10 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Brie Cheese',4.80,80,'g'),
 ('Coles','Halloumi Cheese',18.00,900,'g'),
 ('Coles','Free-Range Eggs',6.50,700,'g'),
+-- Grains, Rice & Pasta
 ('Coles','Jasmine Rice',3.50,1000,'g'),
 ('Coles','Basmati Rice',4.00,1000,'g'),
 ('Coles','Brown Rice',2.50,1000,'g'),
-('Coles','White Bread',3.00,680,'g'),
-('Coles','Wholemeal Bread',2.70,650,'g'),
-('Coles','Multigrain Bread',3.00,680,'g'),
-('Coles','Rye Bread',5.00,680,'g'),
 ('Coles','Pasta - Durum',0.59,100,'g'),
 ('Coles','Oats',1.95,900,'g'),
 ('Coles','Quinoa',6.00,500,'g'),
@@ -154,27 +189,52 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Chickpeas',0.95,100,'g'),
 ('Coles','Lentils',0.99,100,'g'),
 ('Coles','Tofu',1.40,100,'g'),
+-- Bread
+('Coles','White Bread',3.00,680,'g'),
+('Coles','Wholemeal Bread',2.70,650,'g'),
+('Coles','Multigrain Bread',3.00,680,'g'),
+('Coles','Rye Bread',5.00,680,'g'),
+-- Nuts
 ('Coles','Almonds',3.90,100,'g'),
 ('Coles','Cashews',3.50,100,'g'),
 ('Coles','Walnuts',4.80,100,'g'),
 ('Coles','Brazil Nuts',12.00,200,'g'),
 ('Coles','Peanuts',8.00,750,'g'),
 ('Coles','Peanut Butter',7.40,755,'g'),
+-- Vegetables
 ('Coles','Broccoli',6.70,1000,'g'),
 ('Coles','Spinach',5.00,280,'g'),
 ('Coles','Potato',8.50,2000,'g'),
 ('Coles','Sweet Potato',4.90,1500,'g'),
 ('Coles','Carrot',1.70,1000,'g'),
+-- Fruits
 ('Coles','Red Apple',7.50,1000,'g'),
 ('Coles','Green Apple',4.90,1000,'g'),
 ('Coles','Banana',4.50,1000,'g'),
 ('Coles','Orange',3.90,1000,'g'),
 ('Coles','Avocado',2.00,180,'g'),
 ('Coles','Capsicum',1.96,250,'g'),
+-- Snacks
 ('Coles','Pork Crackle',2.10,40,'g'),
 ('Coles','Beef Jerky',10.00,180,'g'),
+-- Drinks
+('Coles','Soft Drink - Regular',1.15,1250,'ml'),
+('Coles','Soft Drink - Diet',1.15,1250,'ml'),
+('Coles','Coca-Cola',3.50,2000,'ml'),
+('Coles','Coke-Zero',3.50,2000,'ml'),
+('Coles','Pepsi',3.80,2000,'ml'),
+('Coles','Pepsi Max',3.80,2000,'ml'),
+('Coles','Orange Juice - Regular',5.00,2000,'ml'),
+('Coles','Orange Juice - Premium',9.50,2000,'ml'),
+('Coles','Apple Juice',5.00,2000,'ml'),
+('Coles','Coffee - Black',32.00,500,'g'),
+('Coles','Coffee - With Milk',32.00,500,'ml'),
+('Coles','Tea - Black',13.50,100,'pack'),
+('Coles','Tea - Green',13.50,100,'pack'),
+('Coles','Tea - With Milk',13.50,100,'pack'),
 
 -- ALDI
+-- Meat
 ('Aldi','Chicken Breast',12.99,1000,'g'),
 ('Aldi','Chicken Tenders',8.49,1000,'g'),
 ('Aldi','Beef Steak - Chuck',16.99,1000,'g'),
@@ -196,6 +256,7 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Duck Breast',11.99,380,'g'),
 ('Aldi','Venison',NULL,NULL,NULL),
 ('Aldi','Bison',NULL,NULL,NULL),
+-- Seafood
 ('Aldi','Salmon',15.99,460,'g'),
 ('Aldi','Smoked Salmon',8.99,200,'g'),
 ('Aldi','Tuna - Fresh',NULL,NULL,NULL),
@@ -206,6 +267,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Trout',NULL,NULL,NULL),
 ('Aldi','Smoked Trout',9.99,200,'g'),
 ('Aldi','Sardines',1.59,110,'g'),
+('Aldi','Prawns',13.49,500,'g'),
+-- Dairy & Eggs
 ('Aldi','Whole Milk',3.19,2000,'ml'),
 ('Aldi','Skim Milk',3.19,2000,'ml'),
 ('Aldi','Greek Yogurt',3.49,1000,'g'),
@@ -217,13 +280,10 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Brie Cheese',3.49,125,'g'),
 ('Aldi','Halloumi Cheese',4.99,225,'g'),
 ('Aldi','Free-Range Eggs',6.19,700,'g'),
+-- Grains, Rice & Pasta
 ('Aldi','Jasmine Rice',3.19,1000,'g'),
 ('Aldi','Basmati Rice',3.99,1000,'g'),
 ('Aldi','Brown Rice',2.49,1000,'g'),
-('Aldi','White Bread',2.29,650,'g'),
-('Aldi','Wholemeal Bread',2.59,650,'g'),
-('Aldi','Multigrain Bread',2.59,650,'g'),
-('Aldi','Rye Bread',3.69,680,'g'),
 ('Aldi','Pasta - Durum',0.95,500,'g'),
 ('Aldi','Oats',1.49,750,'g'),
 ('Aldi','Quinoa',5.49,500,'g'),
@@ -236,25 +296,49 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Chickpeas',0.95,420,'g'),
 ('Aldi','Lentils',1.99,500,'g'),
 ('Aldi','Tofu',2.59,450,'g'),
+-- Bread
+('Aldi','White Bread',2.29,650,'g'),
+('Aldi','Wholemeal Bread',2.59,650,'g'),
+('Aldi','Multigrain Bread',2.59,650,'g'),
+('Aldi','Rye Bread',3.69,680,'g'),
+-- Nuts
 ('Aldi','Almonds',12.99,750,'g'),
 ('Aldi','Cashews',14.99,750,'g'),
 ('Aldi','Walnuts',9.99,500,'g'),
 ('Aldi','Brazil Nuts',15.99,400,'g'),
 ('Aldi','Peanuts',5.89,750,'g'),
 ('Aldi','Peanut Butter',3.09,500,'g'),
+-- Vegetables
 ('Aldi','Broccoli',5.99,1000,'g'),
 ('Aldi','Spinach',3.99,280,'g'),
 ('Aldi','Potato',7.99,2000,'g'),
 ('Aldi','Sweet Potato',3.99,1000,'g'),
 ('Aldi','Carrot',1.99,1000,'g'),
+-- Fruits
 ('Aldi','Red Apple',4.49,1000,'g'),
 ('Aldi','Green Apple',5.49,1000,'g'),
 ('Aldi','Banana',4.29,1000,'g'),
 ('Aldi','Orange',3.49,1000,'g'),
 ('Aldi','Avocado',3.99,1000,'g'),
 ('Aldi','Capsicum',3.49,750,'g'),
+-- Snacks
 ('Aldi','Pork Crackle',2.49,75,'g'),
-('Aldi','Beef Jerky',3.99,50,'g');
+('Aldi','Beef Jerky',3.99,50,'g'),
+-- Drinks
+('Aldi','Soft Drink - Regular',1.09,1250,'ml'),
+('Aldi','Soft Drink - Diet',1.09,1250,'ml'),
+('Aldi','Coca-Cola',2.59,1500,'ml'),
+('Aldi','Coke-Zero',2.59,1500,'ml'),
+('Aldi','Pepsi',3.79,2000,'ml'),
+('Aldi','Pepsi Max',3.79,2000,'ml'),
+('Aldi','Orange Juice - Regular',2.59,2000,'ml'),
+('Aldi','Orange Juice - Premium',NULL,NULL,NULL),
+('Aldi','Apple Juice',2.59,2000,'ml'),
+('Aldi','Coffee - Black',17.49,360,'g'),
+('Aldi','Coffee - With Milk',17.49,360,'ml'),
+('Aldi','Tea - Black',1.99,50,'pack'),
+('Aldi','Tea - Green',1.99,50,'pack')
+('Aldi','Tea - With Milk',1.99,50,'pack');
 
 --Chemist Warehouse
 -- TO DO
