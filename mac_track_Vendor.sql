@@ -7,14 +7,7 @@ VALUES
 ('Chemist Warehouse', 'Nationwide'),
 ('McDonalds', 'Nationwide'),
 ('Hungry Jacks', 'Nationwide'),
-('Grilld', 'Nationwide'),
-('KFC', 'Nationwide'),
-('Red Rooster', 'Nationwide'),
-('Schnitz', 'Nationwide'),
-('Pizza Hut', 'Nationwide'),
-('Dominos', 'Nationwide'),
-('Subway', 'Nationwide'),
-('Guzman Y Gomez', 'Nationwide'),
+('Subway', 'Nationwide');
 
 
 DELETE FROM VendorFoodPrice;
@@ -58,6 +51,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Whole Milk',3.20,2000,'ml'),
 ('Woolworths','Skim Milk',1.65,1000,'ml'),
 ('Woolworths','Greek Yogurt',3.80,1000,'g'),
+('Woolworths','Butter - Salted',7.00,500,'g'),
+('Woolworths','Butter - Unsalted',7.00,500,'g'),
 ('Woolworths','Cottage Cheese',6.00,500,'g'),
 ('Woolworths','Tasty Cheese',7.70,500,'g'),
 ('Woolworths','Cheddar Cheese',4.80,200,'g'),
@@ -66,6 +61,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Brie Cheese',14.90,175,'g'),
 ('Woolworths','Halloumi Cheese',4.80,180,'g'),
 ('Woolworths','Free-Range Eggs',5.50,600,'g'),
+-- Oils & Spreads
+('Woolworths','Peanut Butter',3.40,500,'g'),
 -- Grains, Rice & Pasta
 ('Woolworths','Jasmine Rice',3.50,1000,'g'),
 ('Woolworths','Basmati Rice',4.00,1000,'g'),
@@ -94,7 +91,6 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Walnuts',9.80,450,'g'),
 ('Woolworths','Brazil Nuts',17.50,400,'g'),
 ('Woolworths','Peanuts',6.00,750,'g'),
-('Woolworths','Peanut Butter',3.40,500,'g'),
 -- Vegetables
 ('Woolworths','Broccoli',2.28,250,'g'),
 ('Woolworths','Spinach',5.00,280,'g'),
@@ -166,6 +162,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Whole Milk',3.20,2000,'ml'),
 ('Coles','Skim Milk',1.65,1000,'ml'),
 ('Coles','Greek Yogurt',3.80,1000,'g'),
+('Coles','Butter - Salted',7.50,500,'g'),
+('Coles','Butter - Unsalted',7.50,500,'g'),
 ('Coles','Cottage Cheese',6.00,500,'g'),
 ('Coles','Tasty Cheese',7.70,500,'g'),
 ('Coles','Cheddar Cheese',9.80,500,'g'),
@@ -174,6 +172,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Brie Cheese',4.80,80,'g'),
 ('Coles','Halloumi Cheese',18.00,900,'g'),
 ('Coles','Free-Range Eggs',6.50,700,'g'),
+-- Oils & Spreads
+('Coles','Peanut Butter',7.40,755,'g'),
 -- Grains, Rice & Pasta
 ('Coles','Jasmine Rice',3.50,1000,'g'),
 ('Coles','Basmati Rice',4.00,1000,'g'),
@@ -202,7 +202,6 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Walnuts',4.80,100,'g'),
 ('Coles','Brazil Nuts',12.00,200,'g'),
 ('Coles','Peanuts',8.00,750,'g'),
-('Coles','Peanut Butter',7.40,755,'g'),
 -- Vegetables
 ('Coles','Broccoli',6.70,1000,'g'),
 ('Coles','Spinach',5.00,280,'g'),
@@ -274,6 +273,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Whole Milk',3.19,2000,'ml'),
 ('Aldi','Skim Milk',3.19,2000,'ml'),
 ('Aldi','Greek Yogurt',3.49,1000,'g'),
+('Aldi','Butter - Salted',6.99,500,'g'),
+('Aldi','Butter - Unsalted',6.99,500,'g'),
 ('Aldi','Cottage Cheese',5.49,500,'g'),
 ('Aldi','Tasty Cheese',6.99,500,'g'),
 ('Aldi','Cheddar Cheese',4.49,200,'g'),
@@ -282,6 +283,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Brie Cheese',3.49,125,'g'),
 ('Aldi','Halloumi Cheese',4.99,225,'g'),
 ('Aldi','Free-Range Eggs',6.19,700,'g'),
+-- Oils & Spreads
+('Aldi','Peanut Butter',3.09,500,'g'),
 -- Grains, Rice & Pasta
 ('Aldi','Jasmine Rice',3.19,1000,'g'),
 ('Aldi','Basmati Rice',3.99,1000,'g'),
@@ -310,7 +313,6 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Walnuts',9.99,500,'g'),
 ('Aldi','Brazil Nuts',15.99,400,'g'),
 ('Aldi','Peanuts',5.89,750,'g'),
-('Aldi','Peanut Butter',3.09,500,'g'),
 -- Vegetables
 ('Aldi','Broccoli',5.99,1000,'g'),
 ('Aldi','Spinach',3.99,280,'g'),

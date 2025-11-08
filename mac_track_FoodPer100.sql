@@ -41,6 +41,8 @@ VALUES
     ('Whole Milk', 3.3, 66.0, 4.8, 4.8, 3.4, 0.0, 44, 'Dairy & Eggs'),
     ('Skim Milk', 3.6, 37.5, 5.0, 5.0, 0.1, 0.0, 43, 'Dairy & Eggs'),
     ('Greek Yogurt', 5.0, 122.3, 7.2, 5.5, 7.6, 1.0, 57, 'Dairy & Eggs'),
+    ('Butter - Salted', 0.6, 758.4, 0.7, 0.7, 81.4, 0.0, 540, 'Dairy & Eggs'),
+    ('Butter - Unsalted', 0.6, 771.5, 0.8, 0.8, 82.8, 0.0, 6, 'Dairy & Eggs'),
     ('Cottage Cheese', 11.3, 97.0, 6.3, 5.7, 2.4, 0.0, 333, 'Dairy & Eggs'),
     ('Tasty Cheese', 25.5, 412.0, 0.5, 0.5, 32.7, 0.0, 652, 'Dairy & Eggs'),
     ('Cheddar Cheese', 25.0, 425.0, 0.1, 0.1, 34.4, 0.0, 700, 'Dairy & Eggs'),
@@ -49,6 +51,9 @@ VALUES
     ('Brie Cheese', 19.9, 382.5, 1.0, 1.0, 31.6, 0.0, 605, 'Dairy & Eggs'),
     ('Halloumi Cheese', 18.3, 297.5, 1.1, 1.1, 23.3, 0.0, 1130, 'Dairy & Eggs'),
     ('Free-Range Eggs', 12.2, 147.0, 1.3, 1.0, 9.9, 0.0, 136, 'Dairy & Eggs'),
+
+    -- Oils & Spreads
+    ('Peanut Butter', 22.3, 640.0, 17.8, 8.9, 49.2, 7.1, 274, 'Oils & Spreads'),
 
     -- Grains, Rice & Bread
     ('Jasmine Rice', 7.0, 355.0, 72.0, 1.0, 1.0, 1.0, 5, 'Grains, Rice & Pasta'),
@@ -81,7 +86,6 @@ VALUES
     ('Walnuts', 14.4, 727.5, 3.0, 2.7, 69.2, 6.4, 5, 'Nuts'),
     ('Brazil Nuts', 14.4, 722.5, 2.4, 2.1, 68.5, 8.5, 5, 'Nuts'),
     ('Peanuts', 25.1, 607.0, 9.0, 5.2, 48.3, 8.3, 5, 'Nuts'),
-    ('Peanut Butter', 22.3, 640.0, 17.8, 8.9, 49.2, 7.1, 274, 'Nuts'),
 
     -- Vegetables
     ('Broccoli', 2.8, 34.0, 6.6, 1.7, 0.4, 2.6, 33, 'Vegetables'),
@@ -116,8 +120,61 @@ VALUES
     ('Coffee - With Milk', 0.5, 4.0, 0.5, 0.1, 0.1, 0.0, 4, 'Drinks'),
     ('Tea - Black', 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 3, 'Drinks'),
     ('Tea - Green', 0.0, 1.0, 0.2, 0.0, 0.0, 0.0, 1, 'Drinks'),
-    ('Tea - With Milk', 0.5, 10.0, 0.9, 0.8, 0.5, 0.0, 8, 'Drinks');
+    ('Tea - With Milk', 0.5, 10.0, 0.9, 0.8, 0.5, 0.0, 8, 'Drinks'),
 
     -- Supplements
 
-    -- Takeaway
+    -- Takeaway - McDonalds
+    ('Big Mac', 10.6, 239.0, 19.3, 3.8, 12.6, 1.0, 490, 'McDonalds'),
+    ('Double Big Mac', 12.8, 246.0, 15.4, 3.0, 13.8, 1.0, 480, 'McDonalds'),
+    ('Quarter Pounder', 14.2, 251.0, 17.5, 5.0, 13.5, 1.0, 562, 'McDonalds'),
+    ('Double Quarter Pounder', 16.6, 256.0, 10.9, 2.7, 16.1, 1.0, 455, 'McDonalds'),
+    ('Classic Angus', 12.8, 226.0, 14.8, 3.0, 12.6, 1.0, 351, 'McDonalds'),
+    ('BBQ Bacon Angus', 16.3, 269.0, 16.9, 4.2, 14.9, 1.0, 532, 'McDonalds'),
+    ('Hamburger', 11.1, 245.0, 27.7, 6.4, 8.8, 1.0, 545, 'McDonalds'),
+    ('Cheeseburger', 12.2, 257.0, 25.1, 6.1, 10.9, 1.0, 617, 'McDonalds'),
+    ('Double Cheeseburger', 14.1, 259.0, 18.3, 4.6, 13.4, 1.0, 635, 'McDonalds'),
+    ('McChicken', 8.5, 222.0, 23.1, 3.5, 10.2, 1.0, 345, 'McDonalds'),
+    ('Double McChicken', 9.4, 229.0, 19.7, 2.6, 12.3, 1.0, 356, 'McDonalds'),
+    ('McCrispy', 10.1, 277.0, 25.9, 2.4, 12.1, 1.0, 534, 'McDonalds'),
+    ('McCrispy Deluxe', 10.1, 235.0, 20.6, 2.1, 10.9, 1.0, 497, 'McDonalds'),
+    ('McSpicy', 12.3, 238.0, 19.8, 2.8, 11.9, 1.0, 491, 'McDonalds'),
+    ('Chicken Nuggets', 12.4, 222.0, 12.7, 0.4, 13.4, 1.0, 394, 'McDonalds'),
+    ('Chicken Snack Wrap', 11.4, 251.0, 26.4, 5.3, 7.8, 1.0, 494, 'McDonalds'),
+    ('Grilled Chicken Snack Wrap', 12.9, 201.0, 18.4, 1.8, 8.0, 1.0, 380, 'McDonalds'),
+    ('Filet-o-Fish', 10.4, 241.0, 24.7, 3.7, 10.4, 1.0, 446, 'McDonalds'),
+    ('Double Filet-o-Fish', 11.0, 233.0, 19.4, 2.7, 11.6, 1.0, 442, 'McDonalds'),
+    ('Fries', 4.8, 304.0, 33.8, 0.0, 16.0, 1.0, 292, 'McDonalds'),
+    ('Apple Pie', 2.2, 290.0, 33.1, 11.7, 16.1, 1.0, 156, 'McDonalds'),
+    ('Sundae', 3.8, 185.0, 32.2, 28.0, 4.3, 1.0, 81, 'McDonalds'),
+    ('McFlurry', 4.2, 181.0, 27.5, 22.4, 5.8, 1.0, 100, 'McDonalds'),
+
+    -- Takeaway - Hungry Jacks
+    ('Whopper', 9.9, 243.8, 16.7, 2.8, 13.7, 1.0, 293, 'Hungry Jacks'),
+    ('Double Whopper', 12.8, 251.9, 13.0, 2.2, 16.1, 1.0, 242, 'Hungry Jacks'),
+    ('Ultimate Double Whopper', 17.0, 318.0, 13.6, 2.5, 20.2, 1.0, 562, 'Hungry Jacks'),
+    ('Whopper Junior', 9.6, 217.7, 20.3, 4.7, 14.7, 1.0, 325, 'Hungry Jacks'),
+    ('Bacon Deluxe', 14.8, 289.4, 14.9, 1.6, 17.7, 1.0, 440, 'Hungry Jacks'),
+    ('Hamburger', 11.8, 253.3, 24.9, 5.3, 10.4, 1.0, 404, 'Hungry Jacks'),
+    ('Cheeseburger', 12.9, 268.4, 23.6, 5.3, 12.2, 1.0, 508, 'Hungry Jacks'),
+    ('Double Cheeseburger', 16.2, 290.9, 18.8, 2.8, 15.4, 1.0, 488, 'Hungry Jacks'),
+    ("Chicken Royale", 8.2, 250.7, 29.8, 3.5, 19.4, 1.0, 444, 'Hungry Jacks'),
+    ("Classic Jack's Fried Chicken", 10.8, 309.6, 20.9, 2.0, 18.6, 1.0, 428, 'Hungry Jacks'),
+    ("Cheesy Bacon Jack's Fried Chicken", 11.5, 301.7, 18.9, 1.9, 18.3, 1.0, 525, 'Hungry Jacks'),
+    ("Grilled Chicken", 13.7, 219.5, 17.3, 1.8, 9.4, 1.0, 404, 'Hungry Jacks'),
+    ("Grilled Chicken with Bacon", 13.9, 218.8, 14.7, 1.7, 10.4, 1.0, 545, 'Hungry Jacks'),
+    ('Chicken Nuggets', 13.7, 252.8, 19.8, 1.2, 12.8, 1.0, 424, 'Hungry Jacks'),
+    ('Onion Rings', 2.3, 260.0, 20.5, 3.2, 17.7, 1.0, 292, 'Hungry Jacks'),
+    ('Fries', 2.7, 228.5, 29.0, 0.2, 10.1, 1.0, 421, 'Hungry Jacks'),
+    ('Sundae', 6.5, 257.7, 34.2, 33.9, 6.3, 1.0, 157, 'Hungry Jacks'),
+
+    -- Takeaway - Subway
+    ('Chicken Classic', 9.9, 218.2, 21.1, 3.1, 10.1, 2.4, 626, 'Subway'),
+    ('Turkey Breast', 10.6, 175.1, 21.2, 4.2, 4.7, 2.6, 386, 'Subway'),
+    ('Steak Melt', 11.2, 215.5, 18.8, 2.4, 10.0, 1.7, 644, 'Subway'),
+    ('Pizza Melt', 9.5, 200.0, 18.9, 2.7, 9.2, 1.5, 511, 'Subway'),
+    ('Meatball', 9.7, 228.5, 21.1, 4.3, 11.5, 2.1, 486, 'Subway'),
+    ('Seafood', 6.5, 206.2, 22.9, 4.4, 9.3, 1.2, 384, 'Subway'),
+    ('Tuna Mayo', 9.7, 167.5, 16.9, 1.9, 6.4, 1.6, 329, 'Subway'),
+    ('Falafel', 8.3, 221.3, 25.6, 4.4, 8.5, 3.4, 555, 'Subway'),
+    ('Veggie Delite', 7.1, 167.5, 19.7, 2.2, 6.5, 3.6, 213, 'Subway');
