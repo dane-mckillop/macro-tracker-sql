@@ -76,12 +76,13 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Chia Seeds',5.80,3.5,'g'),
 ('Woolworths','Barley',1.90,500,'g'),
 ('Woolworths','Buckwheat',5.00,500,'g'),
-('Woolworths','Millet',NULL,NULL,NULL),
+('Woolworths','Millet',10.78,500,'g'),
 ('Woolworths','Cous Cous',2.00,500,'g'),
+-- Legumes
 ('Woolworths','Black Beans',2.60,375,'g'),
 ('Woolworths','Chickpeas',1.00,420,'g'),
 ('Woolworths','Lentils',4.80,1000,'g'),
-('Woolworths','Tofu',3.00,450,'g'),
+('Woolworths','Tofu - Firm',3.00,450,'g'),
 -- Bread
 ('Woolworths','White Bread',3.50,800,'g'),
 ('Woolworths','Wholemeal Bread',3.50,800,'g'),
@@ -101,8 +102,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Woolworths','Sweet Potato',4.90,1000,'g'),
 ('Woolworths','Carrot',1.70,1000,'g'),
 -- Fruits
-('Woolworths','Red Apple',5.90,1000,'g'),
-('Woolworths','Green Apple',6.90,1000,'g'),
+('Woolworths','Apple - Red',5.90,1000,'g'),
+('Woolworths','Apple - Green',6.90,1000,'g'),
 ('Woolworths','Banana',0.83,120,'g'),
 ('Woolworths','Orange',1.29,175,'g'),
 ('Woolworths','Avocado',2.00,180,'g'),
@@ -185,10 +186,11 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Buckwheat',5.00,500,'g'),
 ('Coles','Millet',NULL,NULL,NULL),
 ('Coles','Cous Cous',0.99,100,'g'),
+-- Legumes
 ('Coles','Black Beans',0.89,100,'g'),
 ('Coles','Chickpeas',0.95,100,'g'),
 ('Coles','Lentils',0.99,100,'g'),
-('Coles','Tofu',1.40,100,'g'),
+('Coles','Tofu - Firm',1.40,100,'g'),
 -- Bread
 ('Coles','White Bread',3.00,680,'g'),
 ('Coles','Wholemeal Bread',2.70,650,'g'),
@@ -208,8 +210,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Coles','Sweet Potato',4.90,1500,'g'),
 ('Coles','Carrot',1.70,1000,'g'),
 -- Fruits
-('Coles','Red Apple',7.50,1000,'g'),
-('Coles','Green Apple',4.90,1000,'g'),
+('Coles','Apple - Red',7.50,1000,'g'),
+('Coles','Apple - Green',4.90,1000,'g'),
 ('Coles','Banana',4.50,1000,'g'),
 ('Coles','Orange',3.90,1000,'g'),
 ('Coles','Avocado',2.00,180,'g'),
@@ -292,10 +294,11 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Buckwheat',NULL,NULL,NULL),
 ('Aldi','Millet',NULL,NULL,NULL),
 ('Aldi','Cous Cous',1.99,500,'g'),
+-- Legumes
 ('Aldi','Black Beans',0.95,420,'g'),
 ('Aldi','Chickpeas',0.95,420,'g'),
 ('Aldi','Lentils',1.99,500,'g'),
-('Aldi','Tofu',2.59,450,'g'),
+('Aldi','Tofu - Firm',2.59,450,'g'),
 -- Bread
 ('Aldi','White Bread',2.29,650,'g'),
 ('Aldi','Wholemeal Bread',2.59,650,'g'),
@@ -315,8 +318,8 @@ INSERT INTO VendorFoodPrice (VendorName, FoodName, Price, Weight, Unit) VALUES
 ('Aldi','Sweet Potato',3.99,1000,'g'),
 ('Aldi','Carrot',1.99,1000,'g'),
 -- Fruits
-('Aldi','Red Apple',4.49,1000,'g'),
-('Aldi','Green Apple',5.49,1000,'g'),
+('Aldi','Apple - Red',4.49,1000,'g'),
+('Aldi','Apple - Green',5.49,1000,'g'),
 ('Aldi','Banana',4.29,1000,'g'),
 ('Aldi','Orange',3.49,1000,'g'),
 ('Aldi','Avocado',3.99,1000,'g'),
