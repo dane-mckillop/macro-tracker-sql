@@ -7,8 +7,11 @@ CREATE TABLE FoodPer100 (
     Protein FLOAT, 
     Calories FLOAT,
     Carbs FLOAT,
+    Sugar FLOAT,
     Fats FLOAT,
-    Price FLOAT
+    Dietary Fibre FLOAT,
+    Sodium FLOAT,
+    Category VARCHAR(50),
 );
 
 DROP TABLE IF EXISTS Vendor;
